@@ -245,3 +245,78 @@ body {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+
+  /* Top navigation */
+  .top {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .top ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .headerimg {
+    height: 100px;
+  }
+
+  /* About section */
+  .about {
+    flex-direction: column;
+    width: 95%;
+    text-align: center;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .about-img {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  /* Introduction grid → stack vertically */
+  .introduction {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+
+  /* Member cards */
+  .member {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .member-left {
+    width: 100%;
+  }
+
+  .member-img {
+    width: 120px;
+  }
+
+  /* Show cards */
+  .shownew,
+  .showdone {
+    flex-direction: column;
+    text-align: center;
+    width: 95%;
+  }
+
+  .show-left {
+    width: 100%;
+  }
+
+  .show-img {
+    width: 80%;
+    max-width: 250px;
+  }
+}
