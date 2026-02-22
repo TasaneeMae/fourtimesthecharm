@@ -368,7 +368,7 @@ ul {
   background: #cf8282;
 
 
-  padding: 15px;        
+  padding: 20px;        
   margin: 20px 0;       
 
   border-radius: 12px; 
@@ -381,9 +381,9 @@ ul {
 
 .setlist-img {
   width: 45%;
-  display: block;          /* allows margin auto to work */
-  margin: 0 auto;          /* centers the image */
-  border: 3px solid #333;  /* simple border */
-  border-radius: 10px;     /* optional rounded corners */
+  display: block;          
+  margin: 0 auto;          
+  border: 3px solid #333; 
+  border-radius: 10px;     
 
 }
