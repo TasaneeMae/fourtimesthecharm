@@ -1,55 +1,126 @@
+/*nav*/
+
+/* Remove default browser spacing */
+/* Remove browser spacing */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header bar */
 .top {
-  background-color: #f2c94c;
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
 
-  border: 4px solid black;
-  border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    padding: 15px 20px;
+
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(12px);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.25);
+
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-nav {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+/* Group for hamburger + title */
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-
+/* Title */
 .top h3 {
-  justify-self: start;
-  margin: 0;
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
 }
 
-
+/* Logo */
 .headerimg {
-  justify-self: center;
-  height: 150px; 
-  width: auto;
+    height: 120px;
+    width: auto;
 }
 
+/* Hamburger button */
+.hamburger {
+    font-size: 28px;
+    padding: 10px 14px;
+    cursor: pointer;
 
-.top ul {
-  justify-self: end;
-  display: flex;
-  gap: 25px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    border-radius: 8px;
+    backdrop-filter: blur(6px);
+
+    transition: 0.2s ease;
 }
 
-.top ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.1rem;
+.hamburger:hover {
+    background: rgba(0,0,0,0.55);
 }
+
+/* Sidebar */
+/* Sidebar */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -260px; /* fully hidden */
+    width: 260px;
+    height: 100%;
+
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255,255,255,0.25);
+
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    transition: left 0.3s ease;
+    z-index: 1000;
+
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.side-nav.open {
+    left: 0;
+}
+
+.side-nav h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #fff; /* white text */
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-nav ul li {
+    margin: 15px 0;
+}
+
+.side-nav ul li a {
+    text-decoration: none;
+    color: #fff; /* white text */
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.side-nav ul li a:hover {
+    color: #f2c94c; /* optional: your gold accent */
+}
+
 .about {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 
-  background-color: #c7938c;
-  border: 4px solid black;
-  border-radius: 20px;
-  padding: 30px;
-flex-direction: row-reverse;
+
 
   display: flex;
   justify-content: flex-start;   
@@ -59,7 +130,25 @@ flex-direction: row-reverse;
   width: 80%;
   margin: 40px auto;             
   box-sizing: border-box;
-}
+
+
+
+  /* Background box */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+
+  border: 4px solid rgba(6, 0, 0, 0.5);
+
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  color: #221f1f;
+  text-align: center;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;}
+
 
 
 .about-text {
@@ -139,38 +228,58 @@ body {
 }
 
 .showdone {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 
-  background-color: #9c2b2b;
-  border: 4px solid black;
-  border-radius: 20px;
-  padding: 20px;
-  box-sizing: border-box;
+    background: linear-gradient(
+        to bottom,
+        rgba(200, 60, 60, 0.35),   
+        rgba(120, 20, 20, 0.35)   
+    );
+    backdrop-filter: blur(10px);
 
-  min-height: 260px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;  
-  gap: 20px;
+    border: 7px solid rgba(18, 16, 16, 0.25);
+    border-radius: 20px;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    min-height: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    color: #fff; 
+    list-style-type: none;
 }
-
 
 
 .shownew {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 
-  background-color: #bac275;
-  border: 4px solid black;
-  border-radius: 20px;
-  padding: 20px;
-  box-sizing: border-box;
+    background: linear-gradient(
+        to bottom,
+        rgba(80, 200, 120, 0.35),   /* soft highlight green */
+        rgba(20, 100, 50, 0.35)     /* deeper green base */
+    );
+    backdrop-filter: blur(10px);
 
-  min-height: 260px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;   
-  gap: 20px;
+    border: 7px solid rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    min-height: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    color: #fff; /* white text to match your theme */
 }
+
+
 
 
 
@@ -363,18 +472,59 @@ ul {
 }
 
 .nameofphotos {
-  width: 100%;
-  border: 3px solid #333;
-  background: #cf8282;
+    width: 80%;
+    margin: 40px auto; 
 
+    padding: 20px;
+    box-sizing: border-box;
 
-  padding: 20px;        
-  margin: 20px 0;       
-  border-radius: 12px; 
-  font-style: italic; 
-    text-align: center;   
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #fff; 
 
-  box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 10px;
+    text-align: center; 
+}
+
+.disclaimer {
+    width: 80%;
+    margin: 40px auto; 
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #fff; 
+
+    background: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 10px;
+    text-align: center; 
+      list-style: none;
+
+}
+
+.announcements {
+      width: 80%;
+    margin: 40px auto;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #fff; 
+
+    background: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 10px;
+    text-align: center; 
 }
 
 
@@ -385,4 +535,110 @@ ul {
   border: 3px solid #333; 
   border-radius: 10px;     
 
+}
+
+/* audio */
+.audiobox {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+
+    /* Background box */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+
+    border: 4px solid rgba(6, 0, 0, 0.5);
+
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    color: #221f1f;
+    text-align: center;
+
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;}
+
+/* Headings and text */
+.audiobox h2 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.audiobox p {
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.playBtn,
+.pauseBtn {
+    padding: 14px 26px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(25, 100, 241, 0.7);
+    background: rgba(0, 0, 255, 0.15);
+    color: #0d0105;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+
+    backdrop-filter: blur(6px);
+    transition: 0.25s ease;
+    box-shadow: 0 0 12px rgba(55, 94, 223, 0.4);
+}
+
+.playBtn:hover,
+.pauseBtn:hover {
+    background: rgba(119, 40, 65, 0.3);
+    box-shadow: 0 0 20px rgba(60, 26, 37, 0.7);
+    transform: translateY(-3px);
+}
+
+.playBtn:active,
+.pauseBtn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* footer */
+.site-footer {
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.80);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255,255,255,0.25);
+
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* Left side */
+.footer-left {
+    font-size: 16px;
+}
+
+/* Right side links */
+.footer-right {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-right a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.footer-right a:hover {
+    color: #f2c94c; /* your gold accent */
 }
